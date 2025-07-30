@@ -2,9 +2,9 @@ import { createAndAddElement } from "./createAndAddElement.js";
 
 export function listeContacts(
 	users = [
-		{ nom: "chloe", prenom: "chloe", tel: "09090909" },
-		{ nom: "ludo", prenom: "ludo", tel: "09090909" },
-		{ nom: "damien", prenom: "damien", tel: "09090909" },
+		{ nom: "- chloe", prenom: "- chloe", tel: "- 09090909" },
+		{ nom: "- ludo", prenom: "- ludo", tel: "- 09090909" },
+		{ nom: "- damien", prenom: "- damien", tel: "- 09090909" },
 	]
 ) {
 	const myElement = document.createElement("div");
