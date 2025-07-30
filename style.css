@@ -1,3 +1,22 @@
+#myElement {
+    display: flex;
+
+    flex-direction: column;
+    background-color: rgb(218, 212, 212);
+
+}
+
+#listTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+#nomPrenom1 {
+    display: flex;
+    justify-content: flex-start;
+}
 #maPremiereDiv{
     display: flex;
     align-content: center;
