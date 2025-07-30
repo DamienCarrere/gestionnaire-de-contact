@@ -1,6 +1,5 @@
 #myElement {
     display: flex;
-
     flex-direction: column;
     background-color: rgb(218, 212, 212);
 
@@ -11,13 +10,27 @@
     justify-content: center;
     align-items: center;
     color: red;
+    font-size: 35px;
+    height: 10vh;
 }
 
 #nomPrenom1 {
     display: flex;
     justify-content: flex-start;
+    color: red;
+    font-size: 25px;
+    height: 1vh;
 }
-#maPremiereDiv{
+
+#numero1 {
+    display: flex;
+    justify-content: flex-start;
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#maPremiereDiv {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -28,13 +41,13 @@
 }
 
 
-#labelNom{
+#labelNom {
     color: red;
     margin: 5px;
     width: 80%;
 }
 
-#monBoutonValider{
+#monBoutonValider {
     background-color: red;
     margin: 20px;
     width: 90%;
@@ -44,23 +57,21 @@
 }
 
 
-#maDeuxiemeDiv{
+#maDeuxiemeDiv {
     display: flex;
     align-items: center;
     justify-content: center;
-        background-color: rgb(218, 212, 212);
-        padding: 10px;
-        margin: 5px;
-            border-radius: 0.5pc;
+    background-color: rgb(218, 212, 212);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 0.5pc;
 
 }
 
-#optionChoix{
+#optionChoix {
     color: red;
 }
 
 /* ---------------------hamburgerMenu-------------------------------- */
 
-.hamburgerMenu{
-    
-}
+.hamburgerMenu {}
