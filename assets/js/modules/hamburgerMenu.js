@@ -1,10 +1,10 @@
 import { createAndAddElement } from "./createAndAddElement.js";
 
 export function createHamburgerMenu() {
-	let divGlobale = createAndAddElement("div", "");
-	divGlobale.classList.add = "divGlobale";
+	let divHamburger = createAndAddElement("div", "");
+	divHamburger.classList.add = "divHamburger";
 
-	let hamburgerMenu = createAndAddElement("select", "", divGlobale);
+	let hamburgerMenu = createAndAddElement("select", "", divHamburger);
 	hamburgerMenu.classList.add = "hamburgerMenu";
 
 	let optionDefault = createAndAddElement(
