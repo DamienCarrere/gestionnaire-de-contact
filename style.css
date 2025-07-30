@@ -1,0 +1,41 @@
+#maPremiereDiv{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(218, 212, 212);
+    padding: 15px;
+    border-radius: 0.5pc;
+}
+
+
+#labelNom{
+    color: red;
+    margin: 5px;
+    width: 80%;
+}
+
+#monBoutonValider{
+    background-color: red;
+    margin: 20px;
+    width: 90%;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+
+#maDeuxiemeDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        background-color: rgb(218, 212, 212);
+        padding: 10px;
+        margin: 5px;
+            border-radius: 0.5pc;
+
+}
+
+#optionChoix{
+    color: red;
+}
