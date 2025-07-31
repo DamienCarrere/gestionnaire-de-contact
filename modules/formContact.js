@@ -57,29 +57,7 @@ export function formulaireContacts(contactsArray) {
             alert("Veuillez remplir tous les champs.");
             return;
         }
-
-        // const contact = document.createElement('p');
-        // contact.textContent = `Contact : ${nom} ${prenom} - ${numero}`;
-        // listeContacts.appendChild(contact);
-
-        // inputNom.value = "";
-        // inputPrenom.value = "";
-        // inputNumero.value = "";
     });
 }
 
-
-// -------- Deuxième div Choisir une option --------
-// const maDeuxiemeDiv = document.createElement('div');
-// maDeuxiemeDiv.id = "maDeuxiemeDiv";
-// document.body.appendChild(maDeuxiemeDiv);
-
-// const optionChoix = document.createElement('h3');
-// optionChoix.textContent = "Choisir une option";
-// optionChoix.id = "optionChoix";
-// maDeuxiemeDiv.appendChild(optionChoix);
-
-// const listeContacts = document.createElement('div');
-// listeContacts.id = "listeContacts";
-// maDeuxiemeDiv.appendChild(listeContacts);
 
