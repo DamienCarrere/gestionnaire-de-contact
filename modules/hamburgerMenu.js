@@ -1,5 +1,6 @@
 import { listeContacts } from "./listeContacts.js";
 import { formulaireContacts } from "./formContact.js";
+
 export function createHamburgerMenu() {
 	const select = document.createElement("select");
 	document.body.appendChild(select);
@@ -22,23 +23,25 @@ export function createHamburgerMenu() {
 	pageContainer.classList.add("page-container");
 	document.body.appendChild(pageContainer);
 
+	const users = [
+		{ nom: "Dijoux", prenom: "Chloe", tel: "09090909" },
+		{ nom: "Kader", prenom: "Ludo", tel: "09090909" },
+		{ nom: "Carrère", prenom: "Damien", tel: "09090909" },
+	];
+
 	select.addEventListener("change", () => {
 		const value = select.value;
-		const users = [
-			{ nom: "- chloe", prenom: "- chloe", tel: "- 09090909" },
-			{ nom: "- ludo", prenom: "- ludo", tel: "- 09090909" },
-			{ nom: "- damien", prenom: "- damien", tel: "- 09090909" },
-		];
 
 		pageContainer.innerHTML = "";
 
 		if (value === "list") {
-			pageContainer.innerHTML = listeContacts(users).outerHTML;
+			pageContainer.appendChild(listeContacts(users));
 		} else if (value === "add") {
-			pageContainer.innerHTML = formulaireContacts(users).outerHTML;
+			pageContainer.appendChild(formulaireContacts(users));
 		} else if (value === "count") {
-			pageContainer.innerHTML =
-				"<h2>Nombre de contacts</h2><p>Vous avez 3 contacts.</p>";
+			const countDiv = document.createElement("div");
+			countDiv.innerHTML = `<h2>Nombre de contacts</h2><p>Vous avez ${users.length} contacts.</p>`;
+			pageContainer.appendChild(countDiv);
 		}
 
 		select.value = "";

@@ -1,24 +1,21 @@
-import { createAndAddElement } from "./createAndAddElement.js";
-
 export function listeContacts(users) {
 	const myElement = document.createElement("div");
 	myElement.id = "myElement";
-	document.body.appendChild(myElement);
+	myElement.style.textAlign = "left";
 
-	const listTitle = createAndAddElement("h2");
+	const listTitle = document.createElement("h2");
 	listTitle.textContent = "Liste de vos contacts";
-	listTitle.id = "listTitle";
 	myElement.appendChild(listTitle);
 
-	for (let user of users) {
-		const nomPrenom1 = document.createElement("h3");
-		nomPrenom1.textContent = user.nom;
-		nomPrenom1.id = "nomPrenom1";
-		myElement.appendChild(nomPrenom1);
+	users.forEach((user) => {
+		const nomPrenom = document.createElement("h3");
+		nomPrenom.textContent = `${user.nom} ${user.prenom}`;
+		myElement.appendChild(nomPrenom);
 
-		const numero1 = document.createElement("h3");
-		numero1.textContent = user.tel;
-		numero1.id = "numero1";
-		myElement.appendChild(numero1);
-	}
+		const numero = document.createElement("h3");
+		numero.textContent = user.tel;
+		myElement.appendChild(numero);
+	});
+
+	return myElement;
 }
