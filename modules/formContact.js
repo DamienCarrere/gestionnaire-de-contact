@@ -1,10 +1,8 @@
 export function formulaireContacts(users) {
-	// -------- Première div contenant le formulaire --------
 	const maPremiereDiv = document.createElement("div");
 	maPremiereDiv.id = "maPremiereDiv";
-	document.body.appendChild(maPremiereDiv);
 
-	// ----- Nom -----
+	// Labels et inputs
 	const labelNom = document.createElement("label");
 	labelNom.textContent = "Nom";
 	labelNom.htmlFor = "inputNom";
@@ -15,7 +13,6 @@ export function formulaireContacts(users) {
 	inputNom.id = "inputNom";
 	maPremiereDiv.appendChild(inputNom);
 
-	// ----- Prénom -----
 	const labelPrenom = document.createElement("label");
 	labelPrenom.textContent = "Prénom";
 	labelPrenom.htmlFor = "inputPrenom";
@@ -26,7 +23,6 @@ export function formulaireContacts(users) {
 	inputPrenom.id = "inputPrenom";
 	maPremiereDiv.appendChild(inputPrenom);
 
-	// ----- Numéro -----
 	const labelNumero = document.createElement("label");
 	labelNumero.textContent = "Numéro";
 	labelNumero.htmlFor = "inputNumero";
@@ -37,24 +33,29 @@ export function formulaireContacts(users) {
 	inputNumero.id = "inputNumero";
 	maPremiereDiv.appendChild(inputNumero);
 
-	// ----- Bouton Valider -----
+	// Bouton Valider
 	const boutonValider = document.createElement("button");
 	boutonValider.textContent = "Valider";
 	boutonValider.id = "monBoutonValider";
 	maPremiereDiv.appendChild(boutonValider);
 
-	// -------- Événement au clic sur le bouton valider --------
-	boutonValider.addEventListener("click", function () {
-		const nom = inputNom.value;
-		const prenom = inputPrenom.value;
-		const numero = inputNumero.value;
-
-		users.push({ nom, prenom, numero });
+	boutonValider.addEventListener("click", () => {
+		const nom = inputNom.value.trim();
+		const prenom = inputPrenom.value.trim();
+		const numero = inputNumero.value.trim();
 
 		if (!nom || !prenom || !numero) {
 			alert("Veuillez remplir tous les champs.");
 			return;
 		}
-		console.log(users);
+
+		users.push({ nom, prenom, tel: numero });
+
+		// Reset formulaire
+		inputNom.value = "";
+		inputPrenom.value = "";
+		inputNumero.value = "";
 	});
+
+	return maPremiereDiv;
 }
