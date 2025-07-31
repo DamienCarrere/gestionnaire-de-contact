@@ -1,12 +1,6 @@
 import { createAndAddElement } from "./createAndAddElement.js";
 
-export function listeContacts(
-	users = [
-		{ nom: "- chloe", prenom: "- chloe", tel: "- 09090909" },
-		{ nom: "- ludo", prenom: "- ludo", tel: "- 09090909" },
-		{ nom: "- damien", prenom: "- damien", tel: "- 09090909" },
-	]
-) {
+export function listeContacts(users) {
 	const myElement = document.createElement("div");
 	myElement.id = "myElement";
 	document.body.appendChild(myElement);

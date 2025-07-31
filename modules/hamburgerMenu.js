@@ -24,13 +24,18 @@ export function createHamburgerMenu() {
 
 	select.addEventListener("change", () => {
 		const value = select.value;
-		const tab = [];
+		const users = [
+			{ nom: "- chloe", prenom: "- chloe", tel: "- 09090909" },
+			{ nom: "- ludo", prenom: "- ludo", tel: "- 09090909" },
+			{ nom: "- damien", prenom: "- damien", tel: "- 09090909" },
+		];
+
 		pageContainer.innerHTML = "";
 
 		if (value === "list") {
-			pageContainer.innerHTML = listeContacts().outerHTML;
+			pageContainer.innerHTML = listeContacts(users).outerHTML;
 		} else if (value === "add") {
-			pageContainer.innerHTML = formulaireContacts(tab).outerHTML;
+			pageContainer.innerHTML = formulaireContacts(users).outerHTML;
 		} else if (value === "count") {
 			pageContainer.innerHTML =
 				"<h2>Nombre de contacts</h2><p>Vous avez 3 contacts.</p>";
